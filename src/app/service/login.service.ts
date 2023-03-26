@@ -21,7 +21,7 @@ export class loginService {
         'value': 'NNctr6Tjrw9794gFXf3fi6zWBZ78j6Gv3UCb3y0x',
   
     })
-      return this.http.post<Login>(this.URL+'/',{ username: "45543734", password: "Arg@1234"});
+      return this.http.post<Login>(this.URL+'/',{ username: "felipe", password: "admin1234"});
     }
   }
   

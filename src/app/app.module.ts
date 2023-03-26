@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { PantallaloginComponent } from './pantallalogin/pantallalogin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LoginComponent } from './login/login.component';
     HysComponent,
     ProyectoComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    PantallaloginComponent
   ],
   imports: [
     BrowserModule,

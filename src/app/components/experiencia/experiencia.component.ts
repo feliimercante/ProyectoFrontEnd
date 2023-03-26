@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 
@@ -28,4 +28,4 @@ isLogged = false;
 cargarExperiencia(): void{
   this.sExperiencia.lista().subscribe(data => {this.expe = data;})
 }
-}
+}*/
