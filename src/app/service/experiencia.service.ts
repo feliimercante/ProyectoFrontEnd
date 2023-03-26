@@ -1,17 +1,18 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { persona } from '../model/persona.model';
+import { experiencia } from '../model/experiencia';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaService {
-URL = 'http://localhost:8080/personas/';
+export class experienciaService {
+  expURL = 'http://localhost:8080/expLaboral/'
 
-  constructor(private http: HttpClient) { }
 
-  public getPersona(): Observable<persona>{
+  constructor(private httpClient: HttpClient) { }
+  public getExperienciaList(): Observable<experiencia[]>{
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
@@ -22,6 +23,7 @@ URL = 'http://localhost:8080/personas/';
       'value': 'NNctr6Tjrw9794gFXf3fi6zWBZ78j6Gv3UCb3y0x',
 
   })
-    return this.http.get<persona>(this.URL+'traer/perfil?id=1',{ headers: headers});
+    return this.httpClient.get<experiencia[]>(this.expURL + 'list');
   }
+ 
 }

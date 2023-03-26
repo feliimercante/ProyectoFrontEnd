@@ -1,17 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { skills } from '../model/skills';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'http://localhost:8080/auth/?username=45543734,password=Arg@1234';
+  URL = 'http://localhost:8080/skill';
   
     constructor(private http: HttpClient) { }
   
-    public postSkills(): Observable<skills>{
+    public getSkills(): Observable<skills[]>{
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
@@ -22,7 +22,7 @@ export class SkillsService {
         'value': 'NNctr6Tjrw9794gFXf3fi6zWBZ78j6Gv3UCb3y0x',
   
     })
-      return this.http.get<skills>(this.URL+'/',{ headers: headers});
+      return this.http.get<skills[]>(this.URL+'/list',{ headers: headers});
     }
   }
   

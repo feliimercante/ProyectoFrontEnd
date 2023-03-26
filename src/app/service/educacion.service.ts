@@ -1,17 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { educacion } from '../model/educacion';
 
 @Injectable({
   providedIn: 'root'
 })
 export class educacionService {
-  URL = 'http://localhost:8080/auth';
+  URL = 'http://localhost:8080/educacion';
   
     constructor(private http: HttpClient) { }
   
-    public geteducacion(): Observable<educacion>{
+    public geteducacionList(): Observable<educacion[]>{
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
@@ -22,7 +22,7 @@ export class educacionService {
         'value': 'NNctr6Tjrw9794gFXf3fi6zWBZ78j6Gv3UCb3y0x',
   
     })
-      return this.http.get<educacion>(this.URL+'/?id=1',{ headers: headers});
+      return this.http.get<educacion[]>(this.URL+'/list',{ headers: headers});
     }
   }
   

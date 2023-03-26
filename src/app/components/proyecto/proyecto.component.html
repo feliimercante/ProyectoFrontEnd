@@ -1,11 +1,9 @@
 <div class="row">
 <h1>Proyectos Realizados</h1>
-<div class="col-sm-12 col-md-12 col-lg-12 parte1">
-   <p>Lorem ipsum dolor sit amet,
-     consectetur adipisicing elit.
-     Suscipit deleniti quis possimus amet eos totam blanditiis dolorem rerum quos libero!
-     Ullam ducimus fugiat fuga voluptates saepe soluta,
-     eaque possimus a?</p>
+<div *ngFor="let Proyectos of proyectoList" class="col-sm-12 col-md-12 col-lg-12 parte1">
+  <li> <h1>{{Proyectos.nombre}}</h1> <h3> {{Proyectos.fecha.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}}</h3></li>
+   <p>{{Proyectos.descripcion}}</p>
+   <a href="{{Proyectos.link}}">{{Proyectos.link}}</a>
 </div> 
 </div>
 
