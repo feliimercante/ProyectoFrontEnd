@@ -14,7 +14,6 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { Login } from './login/login.component';
 import { PantallaloginComponent } from './pantallalogin/pantallalogin.component';
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { PantallaloginComponent } from './pantallalogin/pantallalogin.component'
     HysComponent,
     ProyectoComponent,
     FooterComponent,
-    Login,
     PantallaloginComponent
   ],
   imports: [
