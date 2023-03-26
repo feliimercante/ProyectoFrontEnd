@@ -1,4 +1,4 @@
-export class experiencia {
+export class educacion {
     id? : number;
     tituloE : string;
     fechaInicioE : Date;
@@ -12,4 +12,3 @@ export class experiencia {
         this.fechaFinE = fechaFinE;
     }
 }
-
