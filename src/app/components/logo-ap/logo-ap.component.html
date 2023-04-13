@@ -7,10 +7,8 @@
                     <a href="https://www.facebook.com/fmercanteorozco"><img src="../../../assets/facebook.png" id="facebook"></a>
                     <a href="https://github.com/feliimercante"><img src="../../../assets/github.png" id="github"></a>
                     <a href="https://www.instagram.com/feli_mercante/"><img src="../../../assets/instagram.png" id="instagram"></a>
-            <button type="button" class="btn btn-outline-light">INGRESO </button>
-            <form action="../../../app/pantallalogin/pantallalogin.component.html">
-                <input type="submit" value="INGRESO" />
-        </form>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogout()"*ngIf="isLogged">CERRAR SESION</button>
                 </div>
     </div>
 </div>

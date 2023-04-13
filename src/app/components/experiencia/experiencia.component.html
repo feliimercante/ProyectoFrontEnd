@@ -1,11 +1,14 @@
 <div class="row">
-<h1>Experiencia laboral</h1>
-<div class="col-lg-1"></div>
-<div class="col-lg-11">
-<p *ngFor="let experiencia of expe">
-  <li> <h1>{{experiencia.tituloE}}</h1> <h3> ( {{experiencia.fechaInicioE.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} - {{experiencia.fechaFinE.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} )</h3></li>
-  {{experiencia.descripcionE}}
-</p>
+  <h1>Experiencia laboral</h1>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <p *ngFor="let experiencia of expe">
+      <li>
+        <h1>{{experiencia.tituloE}}</h1>
+        <h3> ( {{experiencia.fechaInicioE.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} -
+          {{experiencia.fechaFinE.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} )</h3>
+      </li>
+      {{experiencia.descripcionE}}
+    </p>
+  </div>
 </div>
-</div> 
-

@@ -3,8 +3,8 @@
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
     <p *ngFor="let educacion of educationList">
-      <li> <h1>{{educacion.tituloE}}</h1> <h3> ( {{educacion.fechaInicioE.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} - {{educacion.fechaFinE.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} )</h3></li>
-      {{educacion.descripcionE}}
+      <li> <h1>{{educacion.titulo}}</h1> <h3> ( {{educacion.fechaInicio}} - {{educacion.fechaFin.toLocaleString([], {year: "numeric",month: "2-digit",day: "numeric"})}} );</h3></li>
+      {{educacion.descripcion}}
     </p>
     </div>
-    </div> 
+    </div>     

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
@@ -14,7 +13,10 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { PantallaloginComponent } from './pantallalogin/pantallalogin.component';
+import { LoginComponent } from './login/login.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,15 +29,19 @@ import { PantallaloginComponent } from './pantallalogin/pantallalogin.component'
     HysComponent,
     ProyectoComponent,
     FooterComponent,
-    PantallaloginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
