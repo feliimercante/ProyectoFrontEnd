@@ -17,7 +17,7 @@ URL = 'http://localhost:8080/personas/';
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Credentials': 'true',
       'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
       'key': 'x-api-key',
       'value': 'NNctr6Tjrw9794gFXf3fi6zWBZ78j6Gv3UCb3y0x',
 
